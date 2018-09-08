@@ -32,7 +32,7 @@ class User extends Component{
 
    borrow=()=>{
   	var date =new Date();
-  	fetch("http://localhost:3005/Rl",{
+  	fetch("https://loanback.herokuapp.com//Rl",{
    method: "post",
    headers: {"Content-type":"application/json"},
    body:JSON.stringify({
@@ -43,7 +43,7 @@ class User extends Component{
   }
 
   lender=()=>{
-  	fetch("http://localhost:3005/Rl",{
+  	fetch("https://loanback.herokuapp.com/Rl",{
    method: "post",
    headers: {"Content-type":"application/json"},
    body:JSON.stringify({
@@ -52,7 +52,7 @@ class User extends Component{
   .then(res=>{return res.json()})
   .then(da=>{this.setState({list1:da})})
   console.log("s")
-  fetch("http://localhost:3005/Rl",{
+  fetch("https://loanback.herokuapp.com/Rl",{
    method: "post",
    headers: {"Content-type":"application/json"},
    body:JSON.stringify({
@@ -65,7 +65,7 @@ class User extends Component{
   onCreat=(name)=>{
   	if(this.state.A>0){
   	var date =new Date();
-  	fetch("http://localhost:3005/req",{
+  	fetch("https://loanback.herokuapp.com/req",{
    method: "post",
    headers: {"Content-type":"application/json"},
    body:JSON.stringify({
@@ -90,7 +90,7 @@ class User extends Component{
   }
 
   onDelete=(data)=>{
-  	fetch("http://localhost:3005/",{
+  	fetch("https://loanback.herokuapp.com/",{
    method: "delete",
    headers: {"Content-type":"application/json"},
    body:JSON.stringify({
@@ -101,7 +101,7 @@ class User extends Component{
   	   this.borrow();
   }
   onUpdate=(data)=>{
-  	fetch("http://localhost:3005/update",{
+  	fetch("https://loanback.herokuapp.com/update",{
    method: "post",
    headers: {"Content-type":"application/json"},
    body:JSON.stringify({

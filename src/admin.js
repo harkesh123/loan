@@ -13,14 +13,14 @@ class Admin extends Component {
   }
 
   componentWillMount=()=>{
-  	fetch("http://localhost:3005/s",{
+  	fetch("https://loanback.herokuapp.com/s",{
    method: "post",
    headers: {"Content-type":"application/json"},
    body:JSON.stringify({ })})
   .then(res=>{return res.json()})
   .then(da=>{this.setState({list:da})})
 
-  fetch("http://localhost:3005/Rl",{
+  fetch("https://loanback.herokuapp.com/Rl",{
    method: "post",
    headers: {"Content-type":"application/json"},
    body:JSON.stringify({ })})

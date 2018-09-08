@@ -15,7 +15,7 @@ class App extends Component {
     }
   }
   onLogin=(password,name)=>{
- fetch("http://localhost:3005/s",{
+ fetch("https://loanback.herokuapp.com/s",{
    method: "post",
    headers: {"Content-type":"application/json"},
    body:JSON.stringify({
@@ -38,7 +38,7 @@ class App extends Component {
 
   onReg=(name,pass,type)=>{
     if(type){
-      fetch("http://localhost:3005/reg",{
+      fetch("https://loanback.herokuapp.com/reg",{
    method: "post",
    headers: {"Content-type":"application/json"},
    body:JSON.stringify({
@@ -56,7 +56,7 @@ class App extends Component {
       })
     }
     else{
-      fetch("http://localhost:3005/reg",{
+      fetch("https://loanback.herokuapp.com/reg",{
    method: "post",
    headers: {"Content-type":"application/json"},
    body:JSON.stringify({
