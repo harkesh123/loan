@@ -32,7 +32,7 @@ class User extends Component{
 
    borrow=()=>{
   	var date =new Date();
-  	fetch("https://loanback.herokuapp.com//Rl",{
+  	fetch("https://loanback.herokuapp.com/Rl",{
    method: "post",
    headers: {"Content-type":"application/json"},
    body:JSON.stringify({
